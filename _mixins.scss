@@ -1,0 +1,27 @@
+@mixin flex($justify: space-between, $items: center, $direction: row) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: $justify;
+  align-items: $items;
+  flex-direction: $direction;
+}
+
+@mixin bgImg($position: center, $size: cover) {
+  background-position: $position;
+  background-size: $size;
+}
+
+@mixin btn {
+  background: transparent;
+  padding: 10px 40px;
+  text-transform: uppercase;
+  color: $black;
+  border: 1px solid $text;
+  display: inline-block;
+  &:hover {
+    background: $primary;
+    color: $white;
+    border: 1px solid $primary;
+}
+}
+

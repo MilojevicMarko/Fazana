@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: $font;
+  font-size: $fontSize;
+  color: $text;
+  // line-height: 1.6;
+}
+a {
+  text-decoration: none;
+  transition: $transition;
+}
+li {
+  list-style: none;
+}
+.line {
+  height: 5px;
+  background: linear-gradient(to right, $darkGreen, $green, $primary);
+}
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+.py {
+  padding: 100px 0;
+}
+h2 {
+  text-transform: uppercase;
+  margin: 30px 0;
+  font-size: 3rem;
+  &::before {
+    display: block;
+    content: "";
+    width: 150px;
+    height: 3px;
+    background: linear-gradient(to right, $darkGreen, $green, $primary);
+    margin: 0 auto 20px auto;
+  }
+}
+.bg-gray {
+  background-color: $lightgray;
+}
+.headers {
+  img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+  }
+}
+.intro {
+  h2 {
+    font-size: 3rem;
+    margin: 30px 0;
+    color: $primary;
+    text-align: center;
+  }
+  border-bottom: 3px double lighten($text, 50%);
+}
+.istraziteLista {
+  @include flex($items§:flex-start);
+  article {
+    flex: 0 0 31%;
+    border-bottom: 2px double lightgray;
+    padding-bottom: 20px;
+    a {
+      img {
+        width: 100%;
+      }
+      &:hover {
+        opacity: .8;
+      }
+    }
+    h3 {
+      font-size: 1.5erem;
+      padding: 10px 0;
+    }
+  }
+}
+.singleHeaders {
+  background-color: $lightgray;
+  padding: 20px 0;
+  h3 {
+    font-size: 2rem;
+  }
+}
